@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DataSturdy | Sign Up</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        body {
+            /* background-color: #c94545; */
+            /* background-color: #372a2a; */
+            /* background-color: #cd2323; */
+            /* background-color: #efebeb; */
+            background-color: #ffffff;
+            
+        }
+        /* .header img {
+            float: left;
+            width: 200px;
+            height: 200px;
+            background: #555;
+            margin-left: auto;
+            }
+
+            .header h1 {
+            position: relative;
+            top: -12px;
+            left: 10px;
+            } */
+        img {
+            display: block;
+            margin-left: auto;
+            width: 200px;
+            height: 200px;
+            margin-bottom: 0%;
+            }
+            li {
+                color: #faf9f9;
+            }
+            /* .floatRight{margin: 0 0 0 15px;clear: right;float: right;margin-left:20px} */
+    </style>
+</head>
+<body>
+    <!-- <div class="header"> -->
+    <!-- <img src="/Users/300072970/Desktop/Datasturdy.jpeg" alt="logo" class="floatRight"/> -->
+        <!-- <h1>My website name</h1> -->
+    <!-- </div> -->
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#">CompanyName</a>
+          </div>
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Achievments<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Microsoft</a></li>
+                <li><a href="#">Oracle</a></li>
+                <li><a href="#">Amazon</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">About</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <!-- <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li> -->
+            <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+          </ul>
+        </div>
+      </nav>
+    <div style="padding: 10p;border-radius: 25px;height:400px;width: 400px;width: 25%;position: fixed;
+    /* box-shadow: 3px 10px #888888; */
+    /* box-shadow: 4px 4px 4px #faf9f9; */
+    /* box-shadow: -25px -25px 40px #271d1d,
+             25px 25px 40px #483737; */
+    /* border-radius: 50px; */
+    /* background: #d5c8c8; */
+    /* box-shadow:  20px 20px 60px #b5aaaa,
+             -20px -20px 60px #f5e6e6; */
+    box-shadow: -10px -10px 20px #901919,
+    10px 10px 20px #ff2e2e;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #cd2323;">
+        <div style="text-align: center;">
+            <h3 style="color: #faf9f9;">Sign Up</h3><br><br>
+            <form method="post" action="/register_user/">
+                {% csrf_token %}
+                <div class="input-group" style="width: 300px;left:18%">
+                    <input id='username' type="text" class="form-control" name="username" placeholder="Username" style="border-radius: 15px;">
+                </div><br>
+                <div class="input-group" style="width: 300px;left: 18%;">
+                    <!-- <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span> -->
+                    <input id="email" type="text" class="form-control" name="email" placeholder="Email" style="border-radius: 15px;">
+                </div><br>
+                <div class="input-group" style="width: 300px;left: 18%;">
+                    <!-- <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span> -->
+                    <input id="password" type="password" class="form-control" name="password" placeholder="Password" style="border-radius: 15px;">
+                </div><br>
+                <div class="input-group" style="width: 300px;left: 18%;">
+                    <!-- <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span> -->
+                    <input id="password" type="password" class="form-control" name="re_password" placeholder="Re Password" style="border-radius: 15px;">
+                </div><br>
+                <!-- <div class="checkbox">
+                <label style="color: #faf9f9;"><input type="checkbox" style="color: #faf9f9;"> Remember me</label>
+                </div><br> -->
+                <button type="submit" class="btn btn-default" style="border-radius: 10px;">Sign Up</button><br><br>
+                <!-- <a href="#forgot password" style="color: #faf9f9;">Already have an Account</a> -->
+            </form>
+        </div>
+    </div>
+</body>
+</html>
